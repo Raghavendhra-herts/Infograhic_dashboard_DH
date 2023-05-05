@@ -192,7 +192,7 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     sns.set_style("darkgrid")
 
     # create figure and subplot gridspec
-    fig = plt.figure(figsize=(15, 19), dpi = 300)
+    fig, ax = plt.figure(figsize=(15, 19), dpi = 300)
     gs = fig.add_gridspec(9, 9)
     fig.suptitle("Showing the impact of covid-19 on Gloabl Economy \n Name: Raghavendhra Rao Devineni \n Student Id: 21072747", fontsize=22)
     
