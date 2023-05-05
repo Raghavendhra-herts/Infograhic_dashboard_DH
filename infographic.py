@@ -221,14 +221,16 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     for x, (tc, td) in enumerate(zip(gc_bar_data['total_cases'] , gc_bar_data['total_deaths'])):
         ax1.text(x-0.15, tc + 20000, "{:,}".format(tc), ha='center',)
         ax1.text(x+0.15, td + 20000, "{:,}".format(td), ha='center',)
-    # plt.show()
+    # set the text backgroung white
     ax6.patch.set_facecolor('white')
+    # remove the spines and ticks to display only text
     ax6.spines['top'].set_visible(False)
     ax6.spines['right'].set_visible(False)
     ax6.spines['bottom'].set_visible(False)
     ax6.spines['left'].set_visible(False)
     ax6.set_xticks([])
     ax6.set_yticks([])
+    # add the text
     ax6.text(0.5, 0.5, 'the bar plot shows the covid-19 cases. \n Graph shows the top five countries with highest number of cases  \n and the total deaths in these countries ', ha='center', va='center', fontsize=15, color='black')
     
     # summing up total_cases
@@ -250,9 +252,16 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     plt.axis('equal')
     # creating title
     ax2.set_title("Overall rate of cases vs death between 2020-2021 for five countries \n", fontsize=20)
-    # # show the plot
+    # set the text background white
     ax7.patch.set_facecolor('white')
-   
+    # remove the spines and ticks to display only text
+    ax7.spines['top'].set_visible(False)
+    ax7.spines['right'].set_visible(False)
+    ax7.spines['bottom'].set_visible(False)
+    ax7.spines['left'].set_visible(False)
+    ax7.set_xticks([])
+    ax7.set_yticks([])
+    # adding the text
     ax7.text(0.5, 0.5, 'the pie plot shows the overall covid-19 cases. \n Percentage shows the top five countries with overall cases  \n and the overall deaths percentage in these countries ', ha='center', va='center', fontsize=15, color='black')
     
 
@@ -265,7 +274,16 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax3.pie(recovered_percentages, labels= gc_data['Country'], autopct='%1.1f%%')
     # creating the title
     ax3.set_title("Total number of recovered cases from each countries during 2020-2021 ", fontsize=20)
+    # set the text background white
     ax8.patch.set_facecolor('white')
+    # remove the spines and ticks to display only text
+    ax8.spines['top'].set_visible(False)
+    ax8.spines['right'].set_visible(False)
+    ax8.spines['bottom'].set_visible(False)
+    ax8.spines['left'].set_visible(False)
+    ax8.set_xticks([])
+    ax8.set_yticks([])
+    # adding the text
     ax8.text(0.5, 0.5, 'the pie plot shows the recovered covid-19 cases. \n Percentage shows the top five countries recovered cases.  ', ha='center', va='center', fontsize=15, color='black')
     
     
@@ -276,7 +294,16 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax4.set_xlabel("Countries", fontsize=18)
     ax4.set_ylabel("values in billions \n (2018-2020)", fontsize=14)
     ax4.set_title("showing Population, GDP, Imports & Exports for top five countries(before pandemic)",fontsize=18 )
+    # set the text background white
     ax9.patch.set_facecolor('white')
+    # remove the spines and ticks to display only text
+    ax9.spines['top'].set_visible(False)
+    ax9.spines['right'].set_visible(False)
+    ax9.spines['bottom'].set_visible(False)
+    ax9.spines['left'].set_visible(False)
+    ax9.set_xticks([])
+    ax9.set_yticks([])
+    # adding the text
     ax9.text(0.5, 0.5, 'the bar graph shows the population, gdp , \n exports & imports before covid pandemic. \n data shows the top five countries data where USA,\n Brazil and Russia has highest the gdp_per_capita and \n USA and Russia maintain same level of import & exports goods. ', ha='center', va='center', fontsize=15, color='black')
     
     
@@ -288,11 +315,29 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax5.set_xlabel("Countries", fontsize=18)
     ax5.set_ylabel("values in billions \n (2020-2021)", fontsize=14)
     ax5.set_title("Comparing population, GDP, imports & exports by countries (during pandemic)", fontsize=18)
+    # set the text background white
     ax10.patch.set_facecolor('white')
+    # remove the spines and ticks to display only text
+    ax10.spines['top'].set_visible(False)
+    ax10.spines['right'].set_visible(False)
+    ax10.spines['bottom'].set_visible(False)
+    ax10.spines['left'].set_visible(False)
+    ax10.set_xticks([])
+    ax10.set_yticks([])
+    # adding the text
     ax10.text(0.5, 0.5, 'the bar graph shows the population, gdp , \n exports & imports during covid pandemic. \n data shows the top five countries data where \n Brazil and Russia has highest gdp_per_capita during pandemic and \n USA and india has low level of import & exports goods. ', ha='center', va='center', fontsize=15, color='black')
     
+    # set the text background white
     ax11.patch.set_facecolor('white')
-    ax11.text(0.5, 0.5, '\n\n\n\n\n\n \n\n\n\n\n\n \n\n\n\nOverall Covid19 has huge impact on the global economy \n and nearly 3% of the population from top five countries with \n  highest covid cases had died during the pandemic. \n Also GDP level for many countries effected badly which\n shows impact on jobs, increase in bills, grocery over the globe.', ha='center', va='center', fontsize=15, color='black')
+    # remove the spines and ticks to display only text
+    ax11.spines['top'].set_visible(False)
+    ax11.spines['right'].set_visible(False)
+    ax11.spines['bottom'].set_visible(False)
+    ax11.spines['left'].set_visible(False)
+    ax11.set_xticks([])
+    ax11.set_yticks([])
+    # adding the text
+    ax11.text(0.5, 0.5, '\n\n\n\n\n\n \n\n\n\Overall Covid19 has huge impact on the global economy \n and nearly 3% of the population from top five countries with \n  highest covid cases had died during the pandemic. \n Also GDP level for many countries effected badly which\n shows impact on jobs, increase in bills, grocery over the globe.', ha='center', va='center', fontsize=15, color='black')
       
     
     # # show the plot
