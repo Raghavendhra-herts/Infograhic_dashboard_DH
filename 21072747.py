@@ -192,9 +192,12 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     sns.set_style("darkgrid")
 
     # create figure and subplot gridspec
-    fig, ax = plt.figure(figsize=(15, 19), dpi = 300)
+    fig = plt.figure(figsize=(15, 19), dpi = 300)
     gs = fig.add_gridspec(9, 9)
     fig.suptitle("Showing the impact of covid-19 on Gloabl Economy \n Name: Raghavendhra Rao Devineni \n Student Id: 21072747", fontsize=22)
+    
+    # add the color to background
+    fig.set_facecolor('palegreen')
     
     # create subplots
     ax1 = fig.add_subplot(9,2,1,)
@@ -231,7 +234,7 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax6.set_xticks([])
     ax6.set_yticks([])
     # add the text
-    ax6.text(0.5, 0.5, 'the bar plot shows the covid-19 cases. \n Graph shows the top five countries with highest number of cases  \n and the total deaths in these countries ', ha='center', va='center', fontsize=15, color='black')
+    ax6.text(0.5, 0.5, 'the bar plot shows the covid-19 cases. \n Graph shows the top five countries with highest number of cases  \n and the total deaths in these countries .\n And in below pie chart w can see the percentage of overall deaths and cases.', ha='center', va='center', fontsize=15, color='black')
     
     # summing up total_cases
     total_cases = gc_data['Total_cases'].sum()
@@ -262,7 +265,7 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax7.set_xticks([])
     ax7.set_yticks([])
     # adding the text
-    ax7.text(0.5, 0.5, 'the pie plot shows the overall covid-19 cases. \n Percentage shows the top five countries with overall cases  \n and the overall deaths percentage in these countries ', ha='center', va='center', fontsize=15, color='black')
+    ax7.text(0.5, 0.5, 'the pie plot shows the overall covid-19 cases. \n Percentage shows the top five countries with overall cases which is 97% \n and the overall deaths percentage is 2.9% in these countries. ', ha='center', va='center', fontsize=15, color='black')
     
 
 
@@ -284,7 +287,7 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax8.set_xticks([])
     ax8.set_yticks([])
     # adding the text
-    ax8.text(0.5, 0.5, 'the pie plot shows the recovered covid-19 cases. \n Percentage shows the top five countries recovered cases.  ', ha='center', va='center', fontsize=15, color='black')
+    ax8.text(0.5, 0.5, 'From the information in this pie plot shows the recovered covid-19 cases. \n overall 90 % shows the top five countries recovered cases. \n But during this period, there is imapct on GDP, goods services, \n which you can see in below graphs.  ', ha='center', va='center', fontsize=15, color='black')
     
     
     
@@ -337,7 +340,7 @@ def show_infographic_dashboard(gc_bar_data, gc_data, pandemic_before_imports_exp
     ax11.set_xticks([])
     ax11.set_yticks([])
     # adding the text
-    ax11.text(0.5, 0.5, '\n\n\n\n\n\n \n\n\n\Overall Covid19 has huge impact on the global economy \n and nearly 3% of the population from top five countries with \n  highest covid cases had died during the pandemic. \n Also GDP level for many countries effected badly which\n shows impact on jobs, increase in bills, grocery over the globe.', ha='center', va='center', fontsize=15, color='black')
+    ax11.text(0.5, 0.5, 'Overall Covid19 has huge impact on the global economy \n and nearly 3% of the population from top five countries with \n  highest covid cases had died during the pandemic. \n Also GDP level for many countries effected badly which\n shows impact on jobs, increase in bills, grocery over the globe.', ha='center', va='center', fontsize=15, color='black')
       
     
     # # show the plot
